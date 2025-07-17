@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentReference:
-    TypeName: Korori.AudioLifetimeScope
+    TypeName: Yukiori.SystemLifetimeScope
   autoRun: 1
   autoInjectGameObjects: []
   _soundButton: {fileID: 1742538727}

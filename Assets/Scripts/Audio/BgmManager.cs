@@ -18,6 +18,7 @@ namespace Yukiori
             var bgm = _bgmRepository.GetBgmData(bgmId);
             
             _audioSource.clip = bgm.AudioClip;
+            _audioSource.volume = bgm.Volume;
             _audioSource.loop = true;
             _audioSource.Play();
         }

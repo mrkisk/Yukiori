@@ -6,13 +6,13 @@ namespace Yukiori
 {
     public class SystemLifetimeScope : LifetimeScope
     {
-        [SerializeField] private SceneManagementLifetimeScope _sceneManagementLifetimeScope;
-        [SerializeField] private AudioLifetimeScope _audioLifetimeScope;
+        [SerializeField] private SceneManagementInstaller _sceneManagementInstaller;
+        [SerializeField] private AudioInstaller _audioInstaller;
 
         protected override void Configure(IContainerBuilder builder)
         {
-            _sceneManagementLifetimeScope.Build();
-            _audioLifetimeScope.Build();
+            _sceneManagementInstaller.Configure(builder);
+            _audioInstaller.Configure(builder);
             
             builder.RegisterEntryPoint<SystemEntryPoint>();
         }

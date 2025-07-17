@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de6d2f5a26d4b043815db9bb53c237d, type: 3}
   m_Name: SceneDatabase
   m_EditorClassIdentifier: 
-  _sceneDatas: []
+  _sceneDatas:
+  - _sceneId: 1
+    _scenePath: Scenes/Title.scene
+    _previousSceneId: 0
+    _nextSceneId: 2

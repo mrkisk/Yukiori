@@ -11,8 +11,6 @@ namespace Yukiori
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterComponent(_soundButton);
-            var sceneScope = LifetimeScope.Find<SceneManagementLifetimeScope>().Container;
-            var loader = sceneScope.Resolve<ISceneLoader>();
         }
     }
 }

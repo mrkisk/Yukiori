@@ -7,6 +7,7 @@ namespace Yukiori
     [InitializeOnLoad]
     public static class PlayModeBootstrapper
     {
+        private const string PRELOAD_SCENE_PATH = "Assets/Scenes/Preload.unity";
         public const string INITIAL_SCENE_PATH_KEY = "InitialScenePath";
 
         static PlayModeBootstrapper()
@@ -30,7 +31,7 @@ namespace Yukiori
                 EditorPrefs.SetString(INITIAL_SCENE_PATH_KEY, active.path);
 
                 // Preload シーンを単一ロード
-                EditorSceneManager.OpenScene("Assets/Scenes/Preload.unity", OpenSceneMode.Single);
+                EditorSceneManager.OpenScene(PRELOAD_SCENE_PATH, OpenSceneMode.Single);
             }
         }
 

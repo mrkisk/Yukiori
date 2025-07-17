@@ -128,8 +128,8 @@ MonoBehaviour:
     TypeName: 
   autoRun: 0
   autoInjectGameObjects: []
-  _sceneManagementLifetimeScope: {fileID: 7907283951437700361}
-  _audioLifetimeScope: {fileID: 2260484212592585676}
+  _sceneManagementInstaller: {fileID: 7907283951437700361}
+  _audioInstaller: {fileID: 2260484212592585676}
 --- !u!114 &7907283951437700361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,10 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fa416a37bece24ba21b906afff893d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentReference:
-    TypeName: 
-  autoRun: 0
-  autoInjectGameObjects: []
   _sceneDatabase: {fileID: 11400000, guid: 19e3b321f7c410f4faffe64e46042a38, type: 2}
 --- !u!114 &2260484212592585676
 MonoBehaviour:
@@ -159,10 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ff2ca1362eefe4b9be41d2377b3fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentReference:
-    TypeName: 
-  autoRun: 0
-  autoInjectGameObjects: []
   _audioSourceFactoryHost: {fileID: 2323888614644277877}
   _bgmDatabase: {fileID: 11400000, guid: 96db21e80d4df114fa12b2814102c904, type: 2}
   _seDatabase: {fileID: 11400000, guid: 9e9e72479f4aa3b4e9bb5fb2744434d4, type: 2}

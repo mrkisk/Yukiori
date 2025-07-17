@@ -23,12 +23,18 @@ namespace Yukiori
             SceneData sceneData = _sceneRepository.GetSceneData(sceneId);
             if (sceneData != null)
             {
+                _currentSceneId = sceneId;
                 UnityEngine.SceneManagement.SceneManager.LoadScene(sceneData.ScenePath);
             }
             else
             {
                 Debug.LogError($"Scene with ID {sceneId} not found in the database.");
             }
+        }
+        
+        public void LoadInitialScene()
+        {
+            Load(_currentSceneId);
         }
 
         public void LoadPreviousScene()
