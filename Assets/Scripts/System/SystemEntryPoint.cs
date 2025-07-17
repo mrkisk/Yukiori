@@ -6,9 +6,11 @@ namespace Yukiori
     {
         public void Start()
         {
-            UnityEngine.Debug.Log("Starting SystemEntryPoint...");
-            UnityEngine.Debug.Log($"Initial Scene Path: {PlayModeBootstrapper.InitialScenePath}");
-            UnityEngine.SceneManagement.SceneManager.LoadScene(PlayModeBootstrapper.InitialScenePath);
+#if UNITY_EDITOR
+            PlayModeBootstrapper.LoadInitialScene();
+#else
+            // PlayModeBootstrapper.LoadInitialScene();
+#endif
         }
     }
 }
