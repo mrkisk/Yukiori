@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Yukiori
 {
-    public class SeManager : ISePlayer
+    public class SeManager : ISeManager
     {
         private readonly ISeRepository _seRepository;
         private readonly AudioSource _audioSource;

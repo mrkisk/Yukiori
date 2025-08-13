@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Yukiori
 {
-    public class BgmManager : IBgmPlayer
+    public class BgmManager : IBgmManager
     {
         private readonly IBgmRepository _bgmRepository;
         private readonly AudioSource _audioSource;

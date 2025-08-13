@@ -2,9 +2,14 @@ namespace Yukiori
 {
     public interface ISceneLoader
     {
-        void LoadInitialScene();
-        void LoadPreviousScene();
-        void LoadNextScene();
-        void LoadStageScene(int stageId);
+        SceneRepository.SceneType CurrentSceneType { get; }
+        int CurrentStageId { get; }
+
+        void LoadInitial();
+        void LoadPrevious();
+        void LoadNext();
+        void LoadStage(int stageId);
+        void LoadNextStage();
+        bool HasNextStage();
     }
 }

@@ -1,6 +1,6 @@
 namespace Yukiori
 {
-    public interface ISePlayer
+    public interface ISeManager
     {
         void Play(SeId seId);
         void PlayLoop(SeId seId);

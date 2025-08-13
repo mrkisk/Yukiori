@@ -4,15 +4,12 @@ using VContainer.Unity;
 
 namespace Yukiori
 {
-    public class SceneManagementInstaller : MonoBehaviour
+    public class SceneManagementInstaller : MonoBehaviour, IInstaller
     {
-        [SerializeField] private SceneDatabase _sceneDatabase;
-
-        public void Configure(IContainerBuilder builder)
+        public void Install(IContainerBuilder builder)
         {
-            builder.Register<ISceneRepository, SceneRepository>(Lifetime.Scoped);
+            builder.Register<SceneRepository>(Lifetime.Scoped);
             builder.Register<ISceneLoader, SceneManager>(Lifetime.Singleton);
-            builder.RegisterComponent(_sceneDatabase);
         }
     }
 }

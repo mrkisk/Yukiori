@@ -1,6 +1,6 @@
 namespace Yukiori
 {
-    public interface IBgmPlayer
+    public interface IBgmManager
     {
         void Play(BgmId bgmId);
     }

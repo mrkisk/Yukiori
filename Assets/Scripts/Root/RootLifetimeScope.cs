@@ -4,17 +4,15 @@ using VContainer.Unity;
 
 namespace Yukiori
 {
-    public class SystemLifetimeScope : LifetimeScope
+    public class RootLifetimeScope : LifetimeScope
     {
         [SerializeField] private SceneManagementInstaller _sceneManagementInstaller;
         [SerializeField] private AudioInstaller _audioInstaller;
 
         protected override void Configure(IContainerBuilder builder)
         {
-            _sceneManagementInstaller.Configure(builder);
-            _audioInstaller.Configure(builder);
-            
-            builder.RegisterEntryPoint<SystemEntryPoint>();
+            _sceneManagementInstaller.Install(builder);
+            _audioInstaller.Install(builder);
         }
     }
 }

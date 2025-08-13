@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Yukiori
 {
-    public class AudioManager : IAudioEnableControl
+    public class AudioManager : IAudioManager
     {
         private bool _isAudioEnabled = true;
         

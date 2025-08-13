@@ -6,9 +6,10 @@ namespace Yukiori
     {
         private readonly GameObject _host;
 
-        public AudioSourceFactory(GameObject host)
+        public AudioSourceFactory()
         {
-            _host = host;
+            _host = new GameObject("AudioSourceFactory");
+            Object.DontDestroyOnLoad(_host);
         }
 
         public AudioSource Create()
